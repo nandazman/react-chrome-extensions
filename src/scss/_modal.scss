@@ -1,0 +1,97 @@
+.modal-extensions-shopee {
+  * {
+    letter-spacing: -0.02;
+    font-family: 'Montserrat' !important;
+  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000000;
+  outline: 0;
+  overflow: auto;
+  &.modal-backdrop {
+    background-color: #000;
+    opacity: .5;
+    &.modal-backdrop-blur {
+      filter: blur(8px);
+      background: white;
+      opacity: 0.9;
+    }
+  }
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    &.modal-dialog-md {
+      max-width: 325px;
+      .modal-body-easy-tools {
+        padding: 0 10px !important;
+      }
+    }
+    &.modal-dialog-lg {
+      max-width: 768px;
+      .modal-body-easy-tools {
+        padding: 0 30px !important;
+      }
+    }
+    &.modal-dialog-permission{
+      max-width: 402px;
+      .modal-body-easy-tools {
+        padding: 20px 10px !important;
+      }
+
+    }
+  }
+  .modal-header-easy-tools {
+    padding: 30px 30px 32px 30px;
+  }
+  .modal-footer-easy-tools {
+    padding: 32px 30px 20px 30px;
+  }
+  .modal-body-easy-tools {
+    padding: 0 30px;
+  }
+  .modal-header-easy-tools {
+    .modal-header-easy-tools-wrapper {
+      position: relative;
+      .modal-extensions-shopee-title {
+        color: $tosca-blue-mea;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin: 0;
+      }
+      .close-extension-modal {
+        cursor: pointer;
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+      svg.close-extension-modal{
+        top:0;
+      }
+
+    }
+  }
+
+  .wrapper-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rounded-full-icon-item{
+      background-color: $tosca-blue-mea;
+      margin-bottom:32px;
+      border-radius: 50%;
+      width: 100.25px;
+      height: 100.25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

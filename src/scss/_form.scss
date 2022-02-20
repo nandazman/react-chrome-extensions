@@ -1,0 +1,103 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: $black;
+    &.form-radio {
+      color: $grey-normal;
+    }
+  }
+  .form-control {
+    border: 1px solid #8692A6;
+    border-radius: 6px;
+    input, textarea {
+      min-height: 45px;
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      outline: none;
+      padding: 0 12px;
+      font-size: 14px;
+      ::placeholder {
+        color: $inactive-grey-a5;
+      }
+    }
+    textarea {
+      max-height: 250px;
+      padding-top: 16px;
+      resize: none;
+    }
+    .form-suffix {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 12px;
+      &.template-chat-suffix {
+        width: 125px;
+        display: block;
+        p {
+          margin-top: 10px;font-size: 14px;
+          line-height: 150%;
+          letter-spacing: -0.02em;
+          color: #2D3356;
+        }
+      }
+    }
+  }
+  .form-description {
+    font-size: 11px;
+    color: $red-mea
+  }
+  .form-error {
+    display: none;
+    font-size: 11px;
+    color: $red-mea
+  }
+  &.not-valid {
+    .form-control {
+      border-color: #dc3545;
+    }
+    .form-error {
+      display: block;
+    }
+    .template-chat-suffix {
+      p {
+        color: #dc3545 !important;
+      }
+    }
+  }
+  &.form-group-disabled, &.form-group-readonly {
+    .form-control {
+      border-color: #ccc;
+    }
+    textarea, input {
+      color: #ccc;
+      background-color: #E9ECEF;
+      border-color: #ccc;
+    }
+    .form-suffix {
+      background-color: #e9ecef;
+      border-color: #ccc;
+      svg {
+        path {
+          fill: $inactive-grey-a5;
+        }
+      }
+    }
+  }
+  &.form-group-disabled {
+    .form-label {
+      color: $inactive-grey-a5;
+      border-color: #ccc;
+      .radiobox-shopee-checkmark {
+        border-color: $inactive-grey-a5;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Shopeasytool",
+  "description": "Tools to automate task",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://*.shopee.co.id/*"
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./icon/icon-16.png",
+      "32": "./icon/icon-32.png",
+      "48": "./icon/icon-48.png",
+      "128": "./icon/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "./icon/icon-16.png",
+    "32": "./icon/icon-32.png",
+    "48": "./icon/icon-48.png",
+    "128": "./icon/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.css",
+        "assets/icon/icon-48.png"
+      ],
+      "matches": [
+        "https://shopee.co.id/*",
+        "https://seller.shopee.co.id/*"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://shopee.co.id/*",
+        "https://seller.shopee.co.id/*"
+      ],
+      "css": [
+        "index.css"
+      ]
+    }
+  ]
+}

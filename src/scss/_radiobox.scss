@@ -1,0 +1,65 @@
+.wrapper-radiobox-shopee {
+  position: relative;
+  padding-left: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 17px;
+  min-height: 17px;
+  font-size: 14px;
+}
+
+.wrapper-radiobox-shopee input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radiobox-shopee-checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #4B4B50;
+}
+
+.wrapper-radiobox-shopee:hover input:enabled ~ .radiobox-shopee-checkmark {
+  background-color: #fff;
+}
+
+.wrapper-radiobox-shopee input:checked ~ .radiobox-shopee-checkmark {
+  background-color: #fff;
+}
+
+.radiobox-shopee-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.wrapper-radiobox-shopee input:checked ~ .radiobox-shopee-checkmark:after, .wrapper-radiobox-shopee:hover input:enabled ~ .radiobox-shopee-checkmark:after {
+  display: block;
+}
+
+.wrapper-radiobox-shopee .radiobox-shopee-checkmark:after, .wrapper-radiobox-shopee:hover input:enabled ~ .radiobox-shopee-checkmark:after {
+ 	top: 1px;
+	left: 1px;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	background: #4B4B50;
+}
+
+.text-radio{
+  color:#A5A5A5;
+}
+.text-radio.active{
+  color:#4B4B50;
+  font-weight:600;
+}

@@ -1,0 +1,35 @@
+.toggle-wrapper {
+  background: #FFFFFF;
+  border: 1px solid $grey-normal;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  transition: all 250ms;
+  .toggle-wrapper-icon {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    svg {
+      transition: all 250ms;
+    }
+  }
+  &:not(.toggle-active) {
+    p {
+      color: $grey-normal;
+    }
+    .toggle-wrapper-icon {
+      span {
+        &.toggle-icon {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  &.toggle-active {
+    border-color: $orange-mea;
+  }
+}

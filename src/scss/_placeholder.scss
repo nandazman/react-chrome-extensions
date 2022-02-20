@@ -1,0 +1,21 @@
+.placeholder-wrapper {
+  position: relative;
+  cursor: pointer;
+  .placeholder-content {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #A5A5A5;
+    padding: 10px;
+    top: 40px;
+    color: white;
+    width: max-content;
+    max-width: 415px;
+    word-break: break-word;
+  }
+  &:hover, &:focus-within {
+    .placeholder-content {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.message-box {
+  background-color: $purple-mea;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid rgba(251, 83, 83, 0.79);
+  .title-message-box, button {
+    color: #fff;
+    font-weight: 700;
+  }
+  .title-message-box {
+    margin-bottom: 10px;
+  }
+}

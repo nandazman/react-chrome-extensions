@@ -1,0 +1,277 @@
+@import "./variables";
+
+body {
+  * {
+    font-family: 'Montserrat' !important;
+  }
+  margin: 0;
+  width: 330px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  .loader-wrapper-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    .extensions-loader {
+      margin: 0px;
+      margin-right: 16px;
+    }
+  }
+  .extension-shopee-menu {
+    footer {
+      padding: 0px 30px 20px 30px;
+    }
+    header, main {
+      padding: 10px 30px;
+    }
+    .header-menu {
+      background: #F5F5F5;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 9;
+      #announcement {
+        padding: 6px;
+        position: absolute;
+        width: 220px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.18);
+        top: 56px;
+        left: 68px;
+        p {
+          margin: 0;
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    main {
+      .extension-user {
+        text-align: center;
+        margin: 32px 0;
+        .extension-user-name {
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+      .list-menu {
+        margin-bottom: 12px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 87px));
+        justify-content: space-between;
+        row-gap: 16px;
+        text-align: center;
+        svg {
+          margin-bottom: 5px;
+        }
+      }
+      .back-button{
+        margin-top:25px;
+        display: flex;
+        font-weight:500;
+        cursor: pointer;
+        > .text{
+          margin-left:10px;
+        }
+      }
+
+      .icon-warning{
+       margin:32px auto !important;
+       text-align:center
+      }
+
+      .text-maintenance{
+        text-align:center;
+        line-height: 21px;
+        font-size: 14px;
+        color: $grey-normal;
+      }
+
+      .button-orange{
+        margin-top: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        background: #E87F2F;
+        border-radius: 6px;
+        padding:12px 0;
+        color:white;
+        text-decoration: none;
+      }
+    }
+  
+    footer {
+      text-align: center;
+      .extensions-title {
+        color: $orange-mea;
+        font-weight: 700;
+        margin: 0px;
+      }
+      .year {
+        margin: 0;
+        margin-top: 5px;
+      }
+    }
+
+    .extension-help-container {
+      position: relative;
+      #setting {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+        border: 0.5px solid #8692A6;
+        background-color: #fff;
+        position: absolute;
+        top: 38px;
+        width: 100px;
+        left: -50px;
+        z-index: 5;
+        p {
+          cursor: pointer;
+          padding: 10px;
+          margin: 0;
+          color: $black;
+          font-size: 14px;
+        }
+      }
+      &.no-announcement {
+        #extension-announcement {
+          circle {
+            display: none;
+          }
+        }
+      }
+    }
+    &:not(.extension-shopee-outdated) {
+      .version-outdated-backdrop, .menu-version-outdated {
+        display: none;
+      }
+    }
+    &.extension-shopee-outdated {
+      .version-outdated-backdrop {
+        background: #fff;
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      footer {
+        position: relative;
+      }
+      main {
+        position: relative;
+      }
+    }
+  }
+  .extension-shopee-login {
+    header {
+      padding: 30px;
+      text-align: center;
+    }
+    main {
+      padding: 0 30px;
+    }
+    footer {
+      padding: 30px 40px;
+    }
+    .error-message-box {
+      background: #F8D8DA;
+      color: $red-mea;
+      padding: 10px;
+      margin-bottom: 20px;
+      line-height: 150%;
+      text-align: center;
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .extension-hard-version {
+    header, main, footer {
+      padding: 0px 30px 20px 30px;
+    }
+     .header-menu {
+      background: #F5F5F5;
+      display: flex;
+      justify-content: space-between;
+    }
+    .menu-version-outdated {
+      padding-top: 30px;
+      .icon {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .outdated-info {
+        margin-bottom: 48px;
+        p {
+          letter-spacing: -0.02em;
+          color: #000;
+          margin: 16px 0px;
+          text-align: center;
+          &:first-child {
+            font-weight: 700;
+            font-size: 16px;
+            color: #DA4040;
+            margin-top: 0;
+          }
+          &:nth-child(2) {
+            font-size: 14px;
+            color: $grey-normal;
+          }
+        }
+      }
+    }
+  }
+  .soft-version {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    display: flex;
+    width: 271px;
+    margin: auto;
+    padding: 6px;
+    margin-top: 45px;
+    p {
+      margin: 0;
+    }
+    .soft-version-description {
+      margin-left: 10px;
+      margin-right: 15px;
+      p {
+        font-size: 12px;
+        &:first-child {
+          font-weight: bold;
+          color: #DA4040;
+          margin-bottom: 5px;
+        }
+        &:nth-child(2) {
+          color: #4B4B50;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      span {
+        font-weight: 500;
+        color: #4B4B50;
+        cursor: pointer;
+      }
+    }
+    .soft-version-dismiss {
+      position: absolute;
+      top: -15px;
+      right: -8px;
+    }
+  }
+}
